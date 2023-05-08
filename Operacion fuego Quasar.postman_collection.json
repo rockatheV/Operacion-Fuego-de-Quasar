@@ -1,0 +1,588 @@
+{
+	"info": {
+		"_postman_id": "98247818-17a6-4337-9f72-c5d285892e8d",
+		"name": "Operacion fuego Quasar",
+		"description": "Documentacion para el consumo de la API Operacion fuego Quasar.\n\n**URL** **Publica**\n\n[https://ml-operacion-fuego-quasar.azurewebsites.net](https://ml-operacion-fuego-quasar.azurewebsites.net)\n\n**Documentacion** **Online**\n\n[https://ml-operacion-fuego-quasar.azurewebsites.net/swagger/index.html](https://ml-operacion-fuego-quasar.azurewebsites.net/swagger/index.html)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10886694"
+	},
+	"item": [
+		{
+			"name": "topsecret",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"satellites\": [\r\n    {\r\n      \"name\": \"Kenobi\",\r\n      \"distance\": 412.31,\r\n      \"message\": [\"\", \"este\", \"es\", \"un\", \"mensaje\"]\r\n    },\r\n\t{\r\n      \"name\": \"Skywalker\",\r\n      \"distance\": 282.84,\r\n      \"message\": [\"este\", \"\", \"un\", \"mensaje\"]\r\n    },\r\n\t{\r\n      \"name\": \"Sato\",\r\n      \"distance\": 721.11,\r\n      \"message\": [\"\", \"\", \"es\", \"\", \"mensaje\"]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/topsecret",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"topsecret"
+					]
+				},
+				"description": "Metodo Post para el ingreso de informacion de cada satellite."
+			},
+			"response": [
+				{
+					"name": "topsecret",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"satellites\": [\r\n    {\r\n      \"name\": \"Kenobi\",\r\n      \"distance\": 412.31,\r\n      \"message\": [\"\", \"este\", \"es\", \"un\", \"mensaje\"]\r\n    },\r\n\t{\r\n      \"name\": \"Skywalker\",\r\n      \"distance\": 282.84,\r\n      \"message\": [\"este\", \"\", \"un\", \"mensaje\"]\r\n    },\r\n\t{\r\n      \"name\": \"Sato\",\r\n      \"distance\": 721.11,\r\n      \"message\": [\"\", \"\", \"es\", \"\", \"mensaje\"]\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ml-operacion-fuego-quasar.azurewebsites.net/topsecret",
+							"protocol": "https",
+							"host": [
+								"ml-operacion-fuego-quasar",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"topsecret"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 May 2023 19:30:05 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"position\": {\n        \"x\": -100,\n        \"y\": -300.01\n    },\n    \"message\": \"este es un mensaje\"\n}"
+				},
+				{
+					"name": "topsecret",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"satellites\": [\r\n    {\r\n      \"name\": \"Kenobi\",\r\n      \"distance\": 412.31,\r\n      \"message\": [\"\", \"este\", \"es\", \"un\", \"mensaje\"]\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/topsecret",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"topsecret"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/problem+json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 May 2023 19:53:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "ARRAffinity=22a7daa836b64a8ce56c907737553d08297ff2e76cd06a1f52c29956b9a85c17;Path=/;HttpOnly;Secure;Domain=ml-operacion-fuego-quasar.azurewebsites.net"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "ARRAffinitySameSite=22a7daa836b64a8ce56c907737553d08297ff2e76cd06a1f52c29956b9a85c17;Path=/;HttpOnly;SameSite=None;Secure;Domain=ml-operacion-fuego-quasar.azurewebsites.net"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Request-Context",
+							"value": "appId="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\n    \"title\": \"Bad Request\",\n    \"status\": 400,\n    \"traceId\": \"00-3641a73aecd2784ef615f146cc3edbfa-a848dcd3a61fe7a6-00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "topsecret",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/topsecret",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"topsecret"
+					]
+				},
+				"description": "Metodo Get para la solicitud de informacion de los satellites."
+			},
+			"response": [
+				{
+					"name": "topsecret",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ml-operacion-fuego-quasar.azurewebsites.net/topsecret",
+							"protocol": "https",
+							"host": [
+								"ml-operacion-fuego-quasar",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"topsecret"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 May 2023 19:32:16 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"position\": {\n        \"x\": -100,\n        \"y\": -300.01\n    },\n    \"message\": \"este es un mensaje\"\n}"
+				},
+				{
+					"name": "topsecret",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/topsecret",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"topsecret"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/problem+json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 May 2023 19:54:23 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Request-Context",
+							"value": "appId=cid-v1:ffda7a27-6183-44b0-b3c3-088a840afcab"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.4\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-5712fc31fb39423c91bb924fe38ed1b0-e39abea425114c68-00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "topsecret_split",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"distance\": 100.0,\r\n    \"message\": [\"\", \"este\", \"es\", \"un\", \"mensaje\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/topsecret_split/Kenobi",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"topsecret_split",
+						"Kenobi"
+					]
+				},
+				"description": "Metodo Post para el ingreso de informacion de cada satellite."
+			},
+			"response": [
+				{
+					"name": "topsecret_split/Kenobi",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"distance\": 100.0,\r\n    \"message\": [\"\", \"este\", \"es\", \"un\", \"mensaje\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ml-operacion-fuego-quasar.azurewebsites.net/topsecret_split/Kenobi",
+							"protocol": "https",
+							"host": [
+								"ml-operacion-fuego-quasar",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"topsecret_split",
+								"Kenobi"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 May 2023 19:33:39 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"position\": {\n        \"x\": -300,\n        \"y\": 99.99\n    },\n    \"message\": \"este es un mensaje\"\n}"
+				}
+			]
+		},
+		{
+			"name": "topsecret_split",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/topsecret_split",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"topsecret_split"
+					]
+				},
+				"description": "Metodo Get para la solicitud de informacion de los satellites."
+			},
+			"response": [
+				{
+					"name": "topsecret_split",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ml-operacion-fuego-quasar.azurewebsites.net/topsecret_split",
+							"protocol": "https",
+							"host": [
+								"ml-operacion-fuego-quasar",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"topsecret_split"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 May 2023 19:35:01 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"position\": {\n        \"x\": -300,\n        \"y\": 99.99\n    },\n    \"message\": \"este es un mensaje\"\n}"
+				},
+				{
+					"name": "topsecret_split",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/topsecret_split",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"topsecret_split"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/problem+json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 May 2023 19:55:03 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Request-Context",
+							"value": "appId=cid-v1:ffda7a27-6183-44b0-b3c3-088a840afcab"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.4\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-681001ed70a910985c73e97870037397-e7cd5a9fbb8bd105-00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "topsecret",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/topsecret",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"topsecret"
+					]
+				},
+				"description": "Metodo Delete para eliminar los datos guardados."
+			},
+			"response": [
+				{
+					"name": "topsecret",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://ml-operacion-fuego-quasar.azurewebsites.net/topsecret",
+							"protocol": "https",
+							"host": [
+								"ml-operacion-fuego-quasar",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"topsecret"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 08 May 2023 01:28:20 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "Request-Context",
+							"value": "appId=cid-v1:ffda7a27-6183-44b0-b3c3-088a840afcab"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://ml-operacion-fuego-quasar.azurewebsites.net"
+		}
+	]
+}
