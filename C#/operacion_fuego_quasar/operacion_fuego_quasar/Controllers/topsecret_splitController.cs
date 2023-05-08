@@ -83,7 +83,7 @@ namespace operacion_fuego_quasar.Controllers
                 var mensaje = satelliteServices.GetMessage(listMessages);
                 if ((coordenadas.y == null && coordenadas.y == null) || string.IsNullOrEmpty(mensaje))
                 {
-                    return Ok("Informacion del satelite guardada.");
+                    return NotFound("Informacion insuficiente, no se pudo determinar la posicion o el mensaje.");
                 }
                 return Ok(new responseDTO() { message = mensaje, position = coordenadas });
             }
