@@ -69,9 +69,9 @@ namespace operacion_fuego_quasar.Services
             try
             {
                 // Guardado de datos.
-                var dNave1 = distanciasConocidas["Kenobi"] = distances[0];
-                var dNave2 = distanciasConocidas["Skywalker"] = distances[1];
-                var dNave3 = distanciasConocidas["Sato"] = distances[2];
+                var dNave1 = distanciasConocidas[distanciasConocidas.ElementAt(0).Key] = distances[0];
+                var dNave2 = distanciasConocidas[distanciasConocidas.ElementAt(1).Key] = distances[1];
+                var dNave3 = distanciasConocidas[distanciasConocidas.ElementAt(2).Key] = distances[2];
 
                 foreach (var item in distanciasConocidas)
                 {
@@ -81,9 +81,9 @@ namespace operacion_fuego_quasar.Services
                     }
                 }
 
-                var cNave1 = coordenadasConocidas["Kenobi"];
-                var cNave2 = coordenadasConocidas["Skywalker"];
-                var cNave3 = coordenadasConocidas["Sato"];
+                var cNave1 = coordenadasConocidas[coordenadasConocidas.ElementAt(0).Key];
+                var cNave2 = coordenadasConocidas[coordenadasConocidas.ElementAt(1).Key];
+                var cNave3 = coordenadasConocidas[coordenadasConocidas.ElementAt(2).Key];
 
                 // Calculo de posicion a partir de la informacion obtenida.
                 double A = (-2 * cNave1.x!.Value) + (2 * cNave2.x!.Value);
