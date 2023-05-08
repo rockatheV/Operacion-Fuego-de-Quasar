@@ -100,6 +100,10 @@ namespace operacion_fuego_quasar.Services.Tests
                 }
                 index++;
             }
+
+            var result200 = controller.Get() as OkObjectResult;
+            Assert.IsNotNull(result200);
+            Assert.AreEqual(StatusCodes.Status200OK, result200.StatusCode);
         }
     }
 }
