@@ -29,9 +29,11 @@ namespace operacion_fuego_quasar.Controllers
                 return NotFound("No se pudo determinar la posicion o el mensaje.");
             }
 
-            return Ok(new responseDTO() { 
-                message = satelliteServices.ultimoMensaje, 
-                position = satelliteServices.coordenadasActuales });
+            return Ok(new responseDTO()
+            {
+                message = satelliteServices.ultimoMensaje,
+                position = satelliteServices.coordenadasActuales
+            });
         }
 
         /// <summary>
@@ -50,9 +52,14 @@ namespace operacion_fuego_quasar.Controllers
         {
             try
             {
-                if (!ModelState.IsValid || data.satellites?.Length < satelliteServices.coordenadasConocidas.Count)
+                if (!ModelState.IsValid)
                 {
-                    return BadRequest();
+                    return BadRequest("Modelo invalido");
+                }
+
+                if (data.satellites?.Length < satelliteServices.coordenadasConocidas.Count)
+                {
+                    return BadRequest("Se requiere la distancia y mensaje de los 3 satelites conocidos.");
                 }
 
                 var listDistances = new List<double>();
@@ -64,6 +71,10 @@ namespace operacion_fuego_quasar.Controllers
                     {
                         listDistances.Add(sat.distance ?? 0);
                         listMessages.Add(sat.message.ToList());
+                    }
+                    else
+                    {
+                        return BadRequest("Se requiere la distancia y mensaje de " + item.Key);
                     }
                 }
 
@@ -84,10 +95,10 @@ namespace operacion_fuego_quasar.Controllers
         /// <summary>
         /// Metodo Delete para eliminar los datos guardados.
         /// </summary>
-        /// <response code="200">Ok, Respuesta con coordenadas y mensaje.</response>
+        /// <response code="200">Ok</response>
         /// <response code="400">Error en la solicitud</response>
         [HttpDelete]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(responseDTO))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(OkResult))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(BadRequestResult))]
         public IActionResult Delete()
         {

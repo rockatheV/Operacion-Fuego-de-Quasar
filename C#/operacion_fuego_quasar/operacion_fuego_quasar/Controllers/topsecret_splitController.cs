@@ -54,10 +54,15 @@ namespace operacion_fuego_quasar.Controllers
         {
             try
             {
-                satellite_name = char.ToUpper(satellite_name[0]) + satellite_name.Substring(1).ToLower();
-                if (!ModelState.IsValid && !satelliteServices.mensajesRecibidos.ContainsKey(satellite_name))
+                if (!ModelState.IsValid)
                 {
-                    return BadRequest();
+                    return BadRequest("Modelo invalido");
+                }
+
+                satellite_name = char.ToUpper(satellite_name[0]) + satellite_name.Substring(1).ToLower();
+                if (!satelliteServices.mensajesRecibidos.ContainsKey(satellite_name))
+                {
+                    return BadRequest("Satelite desconocido");
                 }
 
                 satelliteServices.distanciasConocidas[satellite_name] = data.distance ?? 0;
@@ -78,7 +83,7 @@ namespace operacion_fuego_quasar.Controllers
                 var mensaje = satelliteServices.GetMessage(listMessages);
                 if ((coordenadas.y == null && coordenadas.y == null) || string.IsNullOrEmpty(mensaje))
                 {
-                    return Ok();
+                    return Ok("Informacion del satelite guardada.");
                 }
                 return Ok(new responseDTO() { message = mensaje, position = coordenadas });
             }
